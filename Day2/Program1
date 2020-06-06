@@ -1,0 +1,42 @@
+def even(num):
+    if num%2==0:
+        print(num,"is even number")
+def odd(num):
+    if num%2!=0:
+        print(num,"is odd number")
+def prime(num):
+    if num>1:
+        for i in range(2,num):
+            if (num%i) == 0:
+                break
+        else:
+            print(num,"is prime number")
+def palindrome(num):
+    temp=num
+    rev=0
+    while(num>0):
+        dig=num%10
+        rev=rev*10+dig
+        num=num//10
+    if(temp==rev):
+        print(temp,"is a palindrome number")
+def armstrong(num):
+    sum=0
+    temp=num
+    while(temp>0):
+        digit=temp%10
+        sum=sum+digit**3
+        temp=temp//10
+    if num==sum:
+        print(num,"is a armstrong number")
+    
+ 
+
+
+                
+num=int(input("Enter the number:  "))
+even(num)
+odd(num)
+prime(num)
+palindrome(num)
+armstrong(num)
